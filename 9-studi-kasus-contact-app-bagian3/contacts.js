@@ -74,7 +74,8 @@ const detailContact = (nama) =>{
 const deleteContact = (nama) => {
     const contacts = loadContact()
     const newContacts = contacts.filter(
-        (contact) => contact.nama.toLowerCase() !== nama.toLowerCase()
+        (contact) => contact.nama.toLowerCase() !== nama.toLowerCase() 
+        //? filter menghasilkan anggota array selain yang dipilih 
         )
         if (contacts.length === newContacts.length){
             console.log(chalk.red.inverse.bold(`${nama} tidak dapat ditemukan !`)
