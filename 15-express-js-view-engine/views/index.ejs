@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Node Js</title>
-</head>
-<body>
-    <h3>links</h3>
-    <ul>
-        <li><a href="/">home</a></li>
-        <li><a href="/about">about</a></li>
-        <li><a href="/contact">contact</a></li>
-        <li><a href="/products/12">contact</a></li>
-    </ul>
     <h1>Hallo dunia</h1>
-</body>
-</html>
+    <h2>selamat datang <%= nama %></h2>
+    <p> Daftar Mahasiswa</p>
+    <% if (mahasiswa.length < 1 ) { %>
+        <p>Data Mahasiswa Masih Kosong</p>
+    <% } else { %>
+    <% mahasiswa.forEach(mhs => { %>
+        <ul>
+            <li>Nama : <%= mhs.nama %></li>
+            <li>Email : <%= mhs.email %></li>
+        </ul>
+    <% }) %>
+    <% } %>
