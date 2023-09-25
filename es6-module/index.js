@@ -6,5 +6,5 @@ const displayStock = stock => {
       console.log(type);
     }
   }
-   
+
   displayStock(coffeStock);
